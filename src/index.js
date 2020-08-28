@@ -1,12 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import Signup from './components/signup';
-import BasicExample from './components/test2';
 import * as serviceWorker from './serviceWorker';
-import Test from './components/test';
-import Test4 from './components/test4';
 import Home from './components/home';
 import GetList from './components/getAPIList';
 import PostList from './components/postAPI';

@@ -7,91 +7,7 @@ header {
   font-size: 30px;
   font-weight: 500;
 }
-.outerdiv {
-  background-color: #ccc;
-}
-.login {
-  margin: 0 auto;
-  width: 720px;
-  text-align: center;
-  border: 1px solid black;
-  padding: 50px 30px;
-}
-.inputarea {
-  padding: $tenPixels;
-  border-radius: $tenPixels;
-  border-top: none;
-  outline: none;
-  margin: $tenPixels 0;
-}
-.btn {
-  background-color: #61dafb;
-  padding: $tenPixels 20px;
-}
 
-/* signup form */
-.signup-form {
-  padding: 10px 20px;
-  h1{
-    text-align: center;
-    text-decoration: underline;
-  }
-  input[type="text"],
-  input[type="email"],
-  input[type="password"] {
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    outline: none;
-    width: 100%;
-    color: #ccc;
-  }
-}
-
-#signUp {
-  margin: 50px auto;
-  max-width: 750px;
-
-  button:nth-of-type(1) {
-    padding: 10px 70px;
-    border-radius: 20px;
-    border: none;
-    color: #fff;
-    outline: none;
-    cursor: pointer;
-    caret-color: red;
-  }
-  button:nth-of-type(2) {
-    padding: 10px 70px;
-    border: none;
-    background-color: #fff;
-    outline: none;
-    cursor: pointer;
-    margin-left: 10px;
-  }
-  button:nth-of-type(2)::after {
-    content: " \2192";
-  }
-}
-.todo-item {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 70%;
-  font-size: 15px;
-  padding: 30px 20px 0;
-  border-bottom: 1px solid #cecece;
-}
-.imageFormat {
-  min-height: 770px;
-  width: 400px;
-  float: left;
-  margin: 0 auto 20px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  box-shadow: 5px 10px #888888;
-  margin-top: 20px;
-}
 .React-logo {
   max-height: 50px;
 }
@@ -111,39 +27,35 @@ header {
     text-decoration: none;
   }
 }
-
-.container {
-  background-image: url(./background.jpeg);
-  height: 600px;
-  max-height: 600px;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 .active{
   color: red;
 }
-
-// sign in form styling
-.formStyle{
-  max-width: 400px;
-  margin: 0 auto;
-
-  div{
-    padding: 20px;
+.todoContainer{
+  max-width: 500px; 
+  margin: 40px auto;
+  background-color: #c3e3c8;
+  padding: 5px 20px;
+  border-radius: 7px;
+  height: 500px;
+  h1{
     text-align: center;
-    input{
-      font-size: 20px;
-      &::placeholder{
-        padding: 20px;
-      }
-    }
-    label {
-      font-size: 20px;
-      margin-right: 20px;
-    }
   }
 }
-
-.text-center{
-  text-align: center;
+.inputElement{
+  display: flex;
+  justify-content: center;
+  input[type='text']{
+    padding: 10px 20px;
+    margin: 0 15px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+  }
+}
+.plusIcon{
+  cursor: pointer;
+  :hover{
+    border-radius: 50%;
+    background-color: #e6c792;
+  }
 }

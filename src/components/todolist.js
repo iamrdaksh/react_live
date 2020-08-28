@@ -1,83 +1,54 @@
-import React from 'react';
-import Images from './image';
+import React, { Component } from 'react';
+import '../mysass.scss';
+import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 
-export default class ContactList extends React.Component {
-
+class TodoList extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            checked: this.props.checked,
-            btnValue: this.props.loginStatus,
-            count: 0
+            item: '',
+            newList: []
+
         }
-        this.handleChange = this.handleChange.bind(this);
-        this.changeStatus = this.changeStatus.bind(this);
     }
 
-    handleChange(event) {
-        let temp = event.target.checked;
-        console.log("checked value ::", temp);
+    changeHandler = (event) => {
         this.setState({
-            checked: temp
-        });
+            item: event.target.value
+        })
     }
-
-    changeStatus(e) {
+    clickHandler = () => {
+        this.setState(prevState => ({
+            newList: [...prevState.newList, this.state.item]
+        }))
         this.setState({
-            btnValue: !this.state.btnValue
-        });
-    }
-
-    increment = () => {
-        this.setState( (prevState) => {
-            return{
-                count: prevState.count + 1
-            }
-        });
-    }
-
-    alertChecked(e){
-        console.log("Checked :: ", e);
+            item: ''
+        })
     }
 
     render() {
-        const bold = {
-            fontWeight: 600
-        }
-
-        const btnValue = this.state.btnValue;
-        let btn_text;
-        if (btnValue) {
-            btn_text = "Click to Logout";
-        } else {
-            btn_text = "Click to Login";
-        }
         return (
-            <div className="imageFormat">
-                <button className="btn" onClick={this.increment}>Increment </button> <span>::  {this.state.count}</span>
-                <Images imageURL={this.props.imageURL} altText={this.props.altText}/>
-                {/* <img src={this.props.imageURL} /> */}
-                <h3 style={{ display: !this.props.Name && 'none' }}> Name: {this.props.Name} 😄 </h3>
-                <p>Phone: {this.props.Phone}</p>
-                <p>Email: {this.props.email}</p>
-                <input type="checkbox" checked={this.state.checked} onChange={this.handleChange} onMouseEnter={()=> this.alertChecked(this.props.Name)}/>
-                <span>{this.props.text}</span>
-                <br />
-                <span style={bold}>Gender : </span>
-                <select value={this.props.value}>
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                </select>
-                <br />
-                <br />
-                <span
-
-                    value={this.state.btnValue}>  Login Status :: {this.state.btnValue.toString().toUpperCase()}
-                </span>
-                <br />
-                <br />
-                <button style={{ display: 'block' }} className="btn" value={this.state.btnValue} onClick={this.changeStatus}> {btn_text} </button>
+            <div className="todoContainer">
+                <h1>ToDo List</h1>
+                <div class="inputElement">
+                    <div>
+                        <input type="text" placeholder="Add a Items" onChange={this.changeHandler} value={this.state.item}/>
+                    </div>
+                    <div className="plusIcon" onClick={this.clickHandler}>
+                        <AddCircleOutlineIcon style={{ fontSize: 40 }} />
+                    </div>
+                </div>
+                <ol>
+                    {
+                        this.state.newList.map((itemValue,index) => {
+                            return (
+                                <li key={index}>{itemValue}</li>
+                            )
+                        })
+                    }
+                </ol>
             </div>
         )
     }
 }
+export default TodoList;
