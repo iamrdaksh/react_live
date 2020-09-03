@@ -59,3 +59,11 @@ header {
     background-color: #e6c792;
   }
 }
+.alignment{
+  position: relative;
+}
+.alignment svg {
+  position: absolute;
+  right: 100px;
+  top: 0
+}
