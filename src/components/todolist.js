@@ -36,7 +36,24 @@ class TodoList extends Component {
             })
         })
     }
+    searchHandler = (event) => {
 
+        let value = event.target.value.toLowerCase();
+        let li = document.getElementsByClassName('alignment');
+        for(let i = 0; i < li.length; i++){
+            let itemValue = li[i].innerText
+            if(itemValue.toLowerCase().indexOf(value) != -1){
+                li[i].style.display = 'list-item';
+            } else {
+                li[i].style.display = 'none';
+            }
+        }
+        // if(this.state.newList.indexOf(event.target.value.toLowerCase()) != -1){
+        //     return this.state.newList[ ]
+        // } else {
+        
+        // }
+    }
     render() {
         return (
             <div className="todoContainer">
@@ -62,6 +79,9 @@ class TodoList extends Component {
                         })
                     }
                 </ol>
+                <div className="search">
+                        <input type="text" placeholder="Search" onKeyUp={this.searchHandler}/>
+                </div>
             </div>
         )
     }

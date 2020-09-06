@@ -38,7 +38,11 @@ header {
   border-radius: 7px;
   height: 500px;
   h1{
-    text-align: center;
+    text-align: center
+  }
+  ol{
+    height: 170px;
+    overflow-y: auto
   }
 }
 .inputElement{
@@ -50,6 +54,16 @@ header {
     border: none;
     outline: none;
     border-radius: 20px;
+  }
+}
+.search{
+  text-align: center;
+  input[type='text']{
+    padding: 10px 20px;
+    margin: 0 15px;
+    border: none;
+    outline: none;
+    border-radius: 20px; 
   }
 }
 .plusIcon{
