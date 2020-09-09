@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+//using css modules
+import styles from '../Mysass.module.scss';
 
 class DateJS extends Component {
     constructor(props){
@@ -38,11 +39,11 @@ class DateJS extends Component {
             cssWish.color = 'Red';
         }
         return (
-            <>
+            <div className={styles.dateAlignment}>
                 <span>Date is :: {new Date().toLocaleDateString()}</span> ||
                 <span style={cssWish}>&nbsp; {greeting}</span> ||
                 <span> Time is:: {this.state.currentTime}</span>
-            </>
+            </div>
         )
     }
 }

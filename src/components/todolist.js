@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../mysass.scss';
+import styles from '../Mysass.module.scss';
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 import DeleteIcon from '@material-ui/icons/Delete';
 
@@ -48,21 +48,16 @@ class TodoList extends Component {
                 li[i].style.display = 'none';
             }
         }
-        // if(this.state.newList.indexOf(event.target.value.toLowerCase()) != -1){
-        //     return this.state.newList[ ]
-        // } else {
-        
-        // }
     }
     render() {
         return (
-            <div className="todoContainer">
+            <div className={styles.todoContainer}>
                 <h1>ToDo List</h1>
-                <div className="inputElement">
+                <div className={styles.inputElement}>
                     <div>
                         <input type="text" placeholder="Add a Items" onChange={this.changeHandler} value={this.state.item} />
                     </div>
-                    <div className="plusIcon" onClick={this.clickHandler}>
+                    <div className={styles.plusIcon} onClick={this.clickHandler}>
                         <AddCircleOutlineIcon style={{ fontSize: 40 }} />
                     </div>
                 </div>
@@ -70,7 +65,7 @@ class TodoList extends Component {
                     {
                         this.state.newList.map((itemValue, index) => {
                             return (
-                                <li key={index} className="alignment">{itemValue}
+                                <li key={index} className={styles.alignment}>{itemValue}
                                     <div style={{ display: 'inline-block', marginLeft: '20px' }}>
                                         <DeleteIcon onClick={() => { this.deleteHandler(index) }} />
                                     </div>
@@ -79,7 +74,7 @@ class TodoList extends Component {
                         })
                     }
                 </ol>
-                <div className="search">
+                <div className={styles.search}>
                         <input type="text" placeholder="Search" onKeyUp={this.searchHandler}/>
                 </div>
             </div>

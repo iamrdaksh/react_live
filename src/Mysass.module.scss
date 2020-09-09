@@ -7,17 +7,17 @@ header {
   font-size: 30px;
   font-weight: 500;
 }
-
-.React-logo {
+.React_logo {
   max-height: 50px;
 }
-.nav-bar {
+.nav_bar {
   background-color: #c8e669;
+  display: flex;
+  align-items: center;
 }
-.nav-links {
+.nav_links {
   list-style-type: none;
-  display: inline-block;
-  float: right;
+  margin-left: auto;
   li {
     display: inline;
     margin-right: 20px;
@@ -80,4 +80,7 @@ header {
   position: absolute;
   right: 100px;
   top: 0
+}
+.dateAlignment{
+  margin-left: 30px;
 }

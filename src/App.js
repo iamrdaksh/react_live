@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import './mysass.scss';
+import styles from '../Mysass.module.scss';
 
 class App extends React.Component {
   constructor(props) {
@@ -40,25 +40,25 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div className="outerdiv">
-        <div className="login">
+      <div className={styles.outerdiv}>
+        <div className={styles.login}>
           <header>Login in React </header>
           <form onSubmit={this.submit}>
             <input
-              type="text" placeholder="Enter Your UserName" className="inputarea" name="username"
+              type="text" placeholder="Enter Your UserName" className={styles.inputarea} name="username"
               onChange={this.myChangeHandler}
             />
             <br />
             <input
-              type="password" placeholder="Enter Your Password" className="inputarea" name="password"
+              type="password" placeholder="Enter Your Password" className={styles.inputarea} name="password"
               onChange={this.myChangeHandler}
             />
             <br />
             <input
-              type="submit" className="btn" onClick={this.handleClick}
+              type="submit" className={styles.btn} onClick={this.handleClick}
             />
             <p>Not registered yet, Register Now</p>
-            <button className="btn">Register</button>
+            <button className={styles.btn} >Register</button>
           </form>
         </div>
       </div>
