@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from '../react-logo.png';
+import logo from '../assets/react-logo.png';
 import styles from '../Mysass.module.scss';
 import { NavLink } from 'react-router-dom';
 import DateJS from './dateJS';
@@ -11,6 +11,9 @@ class Nav extends Component {
                 <img src={logo} className={styles.React_logo} alt="logo" />
                 <DateJS />
                 <ul className={styles.nav_links}>
+                    <li>
+                        <img src={require("../assets/rahul_daksh.jpg")} className={styles.React_logo} alt="rahul daksh" />
+                    </li>
                     <li>
                         <NavLink exact activeClassName="active" to="/">Home</NavLink>
                     </li>

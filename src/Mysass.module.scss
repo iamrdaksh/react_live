@@ -8,16 +8,22 @@ header {
   font-weight: 500;
 }
 .React_logo {
-  max-height: 50px;
+  max-height: 40px;
+  border-radius: 50%;
 }
 .nav_bar {
-  background-color: #c8e669;
+  background-color:	#d9bf8c;
   display: flex;
   align-items: center;
+  max-height: 40px;
+  box-shadow: 0px 70px 50px 140px #FF9933, 0px 140px 50px 250px #fff, 0px 224px 50px 360px #138808;
 }
 .nav_links {
   list-style-type: none;
+  display: inline-flex;
+  margin: 0;
   margin-left: auto;
+  align-items: center;
   li {
     display: inline;
     margin-right: 20px;
@@ -83,4 +89,13 @@ header {
 }
 .dateAlignment{
   margin-left: 30px;
+}
+
+@media all and (max-width: 767px){
+  .nav_bar{
+    flex-direction: column;
+    div, ul{
+      margin-left: 0;
+    }
+  }
 }

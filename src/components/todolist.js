@@ -39,11 +39,12 @@ class TodoList extends Component {
     searchHandler = (event) => {
 
         let value = event.target.value.toLowerCase();
-        let li = document.getElementsByClassName('alignment');
+        let li = document.querySelectorAll('.searchList li');
         for(let i = 0; i < li.length; i++){
             let itemValue = li[i].innerText
-            if(itemValue.toLowerCase().indexOf(value) != -1){
+            if(itemValue.toLowerCase().indexOf(value) !== -1){
                 li[i].style.display = 'list-item';
+                
             } else {
                 li[i].style.display = 'none';
             }
@@ -61,7 +62,7 @@ class TodoList extends Component {
                         <AddCircleOutlineIcon style={{ fontSize: 40 }} />
                     </div>
                 </div>
-                <ol>
+                <ol className="searchList">
                     {
                         this.state.newList.map((itemValue, index) => {
                             return (
