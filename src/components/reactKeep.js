@@ -1,19 +1,18 @@
-import React, {Component} from 'react';
-import Button from '@material-ui/core/Button';
-import AddIcon from '@material-ui/icons/Add';
-import TextareaAutosize from '@material-ui/core/TextareaAutosize';
+import React, { Component } from 'react';
+import styles from '../Mysass.module.scss';
 
-class ReactKeep extends Component{
-    render(){
-        return(
-            <div className="main_note">
-                <form>
-                    <input type="text" placeholder="Title" />
-                    <textarea row="" column="" placeholder="Write a note..."></textarea>
-                    <Button>
-                        <AddIcon className="plus_sign" />
-                    </Button>
-                </form>
+class ReactKeep extends Component {
+
+    mainHandler = () => {
+        let title = document.getElementsByClassName('title_note');
+    }
+
+    render() {
+
+        return (
+            <div>
+                <div className={styles.title_note} contentEditable="true" data-placeholder="Title" />
+                <div className={styles.main_note} contentEditable="true" data-placeholder="Take a note..." onClick={this.mainHandler}/>
             </div>
         )
     }

@@ -27,7 +27,7 @@ class DateJS extends Component {
         
         return (
             <div className={styles.dateAlignment}>
-                <span> Time is:: {this.state.currentTime}</span>
+                <span> Time is :: {this.state.currentTime}</span>
             </div>
         )
     }
