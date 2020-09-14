@@ -8,7 +8,7 @@ header {
   font-weight: 500;
 }
 .React_logo {
-  max-height: 40px;
+  max-height: 39px;
   border-radius: 50%;
 }
 .nav_bar {
@@ -17,6 +17,7 @@ header {
   align-items: center;
   max-height: 40px;
   box-shadow: 0px 70px 50px 140px #ecbe90, 0px 140px 50px 250px #fff, 0px 224px 50px 360px #95dd8e;
+  min-height: 50px
 }
 .nav_links {
   list-style-type: none;
@@ -25,8 +26,9 @@ header {
   margin-left: auto;
   align-items: center;
   li {
-    display: inline;
+    display: inline-flex;
     margin-right: 20px;
+    align-items: center;
   }
   a {
     text-decoration: none;
@@ -92,22 +94,20 @@ header {
   color: #fff;
 }
 .main_note,.title_note{
-  max-width: 500px;
   border: 1px solid #a59999;
-  margin: 50px auto;
+  margin: 0;
   padding: 10px;
   outline: none;  
   border-radius: 10px
 }
 .title_note{
-  margin-bottom: 0;
+  margin-top: 50px;
   border-bottom: 0; 
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   // visibility: hidden;
 }
 .main_note{
-  margin-top: 0;
   border-top: 0;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -117,13 +117,53 @@ header {
 //   border-top-left-radius: 0;
 //   border-top-right-radius: 0;
 // }
-.main_note:empty:before,
-.title_note:empty:before {
+.main_note:empty::before,
+.title_note:empty::before {
   content: attr(data-placeholder);
 }
 .main_note:empty:focus:before,
 .title_note:empty:focus:before{
   content: '';
+}
+.keepBox{
+  max-width: 500px;
+  margin: 0 auto ;
+  box-shadow: 3px 5px 13px 9px #e100001f;
+  border-radius: 10px
+}
+.addKeep{
+  float: right;
+  height: 30px;
+  width: 30px;
+  font-size: 23px;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  position: relative;
+  top: -18px;
+  left: -3px;
+  cursor: pointer;
+}
+.contentBox{
+  max-width: 300px;
+  padding: 20px;
+  margin: 40px 10px;
+  border: 1px solid #a59999;
+  border-radius: 8px;
+}
+.removeKeep{
+  float: right;
+  height: 30px;
+  width: 30px;
+  font-size: 20px;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.noteTitle, .mainNote{
+  padding: 10px;
+  font-size: 17px;
 }
 @media all and (max-width: 767px){
   .nav_bar{

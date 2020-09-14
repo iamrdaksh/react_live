@@ -6,7 +6,7 @@ class HomePage extends Component {
         return (
             <Aux>
                 <h1>Welcome to Home Page of React</h1>
-                <h2>Page is under maintenance</h2>
+                <h2>Page is under maintenance, Visit Again</h2>
             </Aux>
         )
     }
