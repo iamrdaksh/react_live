@@ -13,6 +13,7 @@ class Home extends React.Component {
                 <Nav />
                 <Switch>
                     <Route exact path="/" component={HomePage} />
+                    <Route exact path="/react_live" component={HomePage} />
                     <Route exact path="/todo" component={Todolist} />
                     <Route exact path="/react-keep" component={ReactKeep} />
                     <Route component={NotFound} />
