@@ -20,9 +20,6 @@ class Nav extends Component {
                     <li>
                         <NavLink exact activeClassName="active" to="/todo">Todoist</NavLink>
                     </li>
-                    <li>
-                        <NavLink exact activeClassName="active" to="/react-keep">React Keep</NavLink>
-                    </li>
                 </ul>
             </div>
         )
