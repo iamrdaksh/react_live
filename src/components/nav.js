@@ -15,7 +15,7 @@ class Nav extends Component {
                         <img src={require("../assets/rahul_daksh.jpg")} className={styles.React_logo} alt="rahul daksh" />
                     </li>
                     <li>
-                        <NavLink exact activeClassName="active" to="/">Home</NavLink>
+                        <NavLink exact activeClassName="active" to="/">HomeS</NavLink>
                     </li>
                     <li>
                         <NavLink exact activeClassName="active" to="/todo">Todoist</NavLink>
